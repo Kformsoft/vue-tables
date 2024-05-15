@@ -89,7 +89,7 @@
  <tr v-for="row in data [[rowFilters]]" [[trackBy]] @click='rowWasClicked(row)'
 :class="rowClass(row)"
  >
-   <td v-for="column in allColumns"
+   <td v-for="column in allColumns" data-label="{{getHeading(column)}}"
    v-html="row[column] | render row column [[columnFilters]]"></td>
  </tr>
 
